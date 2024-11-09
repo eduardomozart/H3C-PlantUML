@@ -31,7 +31,7 @@ hide methods
 skinparam style strictuml
 skinparam DefaultTextAlignment center
 
-!define H3CPuml https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/main
+!define H3CPuml https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/main/puml
 !include H3CPuml/image365.puml
 !include H3CPuml/image356.puml
 
