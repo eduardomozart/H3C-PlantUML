@@ -19,8 +19,7 @@ ls *.png | sed -e 's/\.png$//' | parallel "plantuml -encodesprite 16z {}.png >> 
 
 ## Sample
 
-![Sample](![your-UML-diagram-name](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/master/Sample.iuml)
-)
+![Sample](https://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/master/Sample.iuml)
 
 ```csharp
 @startuml
