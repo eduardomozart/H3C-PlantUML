@@ -19,7 +19,8 @@ ls *.png | sed -e 's/\.png$//' | parallel "plantuml -encodesprite 16z {}.png >> 
 
 ## Sample
 
-![Basic Usage - DHCP](https://www.plantuml.com/plantuml/png/ZLDXJzim4FtkNt7GVTYqqT2cBHAg8bWhX3JM8HYV61zCV4qj75zcNxOnjFy-9sbHmeWqjKhaT-_UUtTkJpnBnsLkX7_Gjf1Evk2aVV1OmD6q1LfIM86ZDcYqHNui4CZnXeJ1DGCJE9rj69HscB8cApPQ8UGOACgtkZq_6WnFfzCN2PQubgNXh_YBJutER8wM8GqFT4BiALm7NpYF5vUX3JRCXJ-E8YT_3ZFDc_A-zEXI2cpBmvJo25KfdQASVal7KUWxk3JIyitdYoYNseezRLDJgcV9IESomtWs7HRXr5UUpfgocDU3908Dra6V1C1Pi5-G8GVifFLXh509-4L8_Xh-KQOFcQFIgd-hVuIeDYbjPX2UEYA3E3wQBfPRxBfUw3YSbbfcPALPaBFeO18qvb4JiossloRQ3vAfaTx3DReVw6e7WFdD-yF3yM7o_4uhm-F1w6Yyd9qbypUx9IJpg2ubJTkMTc_2G4cbg1KvM9ulBdUyRxRvX4nRumjPC1LRunwZsRHhrCtN_-u6QfnUIsA9mpwwx2frMALFAUnbrxGFqiDgrD_mPRr-oHxtiw_mUucUk_oudt-w-DJbJeHusupreRd0Tp24Ap8e6XGERhU_ahk3AlTgr4OIQ9fsv7c7FHQhSQU_I-vmOx6A_rzv8bQJrvI5j9POiYPR3m63rZy11eFRUpBgheqzXTiBtnEqgipDNm00)
+![Sample](![your-UML-diagram-name](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/master/Sample.iuml)
+)
 
 ```csharp
 @startuml
