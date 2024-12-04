@@ -23,17 +23,14 @@ ls *.png | sed -e 's/\.png$//' | parallel "plantuml -encodesprite 16z {}.png >> 
 
 ```csharp
 @startuml
-skinparam ranksep 75
-skinparam nodesep 15
 skinparam linetype ortho
-left to right direction
-hide methods
+skinparam nodesep 200
 skinparam style strictuml
-skinparam DefaultTextAlignment center
 
 !define H3CPuml https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/main/puml
-!include H3CPuml/image365.puml
+!include H3CPuml/image39.puml
 !include H3CPuml/image356.puml
+!include H3CPuml/image365.puml
 
 <style>
 element {
@@ -41,43 +38,28 @@ element {
   LineColor transparent
   BackgroundColor transparent
 }
-
-rectangle {
-  LineColor #3375CD
-  LineStyle 2
-  DiagonalCorner 4
-}
 </style>
 
-rectangle "foo" {
-class Server {
-    <U+0020><U+0020><color:#172D6F><$image356></color>
-    <color:#black>Servidor DHCP</color>\n\n\n\n
+class "<color:#black><b>Suplicante" as Supplicant {
+    \n<U+0020><color:#172D6F><$image365{scale=0.60}></color>
+    {method} \n\n
 }
 
-class Laptop {
-    <color:#172D6F><$image365></color>
-    <U+0020><U+0020><U+0020><U+0020><U+0020><color:#black>Laptop</color>\n\n\n\n
+class "<color:#black><b>Autenticador" as Authenticator {
+    \n<U+0020><U+0020><color:#172D6F><$image39{scale=0.75}></color>
+    {method} <color:#black><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><size:11>Switch\n<color:#black><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><size:11>AP\n<color:#black><U+0020><U+0020><U+0020><size:11> Controladora
 }
 
-note "<color:#black>DHCP Discover</color>" as N1
-note "<color:#black>DHCP Offer</color>" as N2
-note "<color:#black>DHCP Request</color>" as N3
-note "<color:#black>DHCP ACK</color>" as N4
-
-(Laptop,Server) . Role
-Laptop -[#3375CD]- N1
-N1 -[#3375CD]-> Server
-Laptop <-[#3375CD]- N2
-N2 -[#3375CD]- Server
-Laptop -[#3375CD]- N3
-N3 -[#3375CD]-> Server
-Laptop <-[#3375CD]- N4
-N4 -[#3375CD]- Server
-
-annotation Role #transparent ##[bold]transparent {
+class "<color:#black><b>Servidor RADIUS</color>\n<color:#black><b>AD DS</color>" as Server {
+    <U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><color:#172D6F><$image356{scale=0.75}></color>\n\n
 }
 
-}
+Supplicant -[#black]> Authenticator : <color:#black>Layer 2
+Supplicant -[#black]> Authenticator : <U+0020>
+Supplicant -[#black]> Authenticator : <color:#black>EAPoL - EAPoW
+
+Authenticator -[#black]> Server : <color:#black>Layer 3
+Authenticator -[#black]> Server : <U+0020>
+Authenticator -[#black]> Server : <color:#black>RADIUS
 @enduml
 ```
