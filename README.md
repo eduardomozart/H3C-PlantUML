@@ -29,4 +29,4 @@ https://github.com/eduardomozart/H3C-PlantUML/blob/59ff55e7ae1c80eed0ba2f0d49e9d
 
 ![STP](https://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/master/Samples/STP.puml)
 
-https://github.com/eduardomozart/H3C-PlantUML/blob/59ff55e7ae1c80eed0ba2f0d49e9de93d4bfc13e/Samples/STP.puml#L1-L29
+https://github.com/eduardomozart/H3C-PlantUML/blob/8cec20a438b69c71d91741e2faf5e5dbda739cd9/Samples/STP.puml#L1-L29
