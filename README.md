@@ -17,49 +17,16 @@ ls *.png | magick {} -background white -alpha remove -alpha off {}
 ls *.png | sed -e 's/\.png$//' | parallel "plantuml -encodesprite 16z {}.png >> {}.puml"
 ```
 
-## Sample
+## Getting Start
 
-![Sample](https://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/master/Sample.iuml)
+### 802.1X
 
-```csharp
-@startuml
-skinparam linetype ortho
-skinparam nodesep 200
-skinparam style strictuml
+![802.1X](https://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/master/Samples/Dot1x.puml)
 
-!define H3CPuml https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/main/puml
-!include H3CPuml/image39.puml
-!include H3CPuml/image356.puml
-!include H3CPuml/image365.puml
+https://github.com/eduardomozart/H3C-PlantUML/blob/59ff55e7ae1c80eed0ba2f0d49e9de93d4bfc13e/Samples/Dot1x.puml#L1-L40
 
-<style>
-element {
-  FontColor transparent
-  LineColor transparent
-  BackgroundColor transparent
-}
-</style>
+### STP
 
-class "<color:#black><b>Suplicante" as Supplicant {
-    \n<U+0020><color:#172D6F><$image365{scale=0.60}></color>
-    {method} \n\n
-}
+![STP](https://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/master/Samples/STP.puml)
 
-class "<color:#black><b>Autenticador" as Authenticator {
-    \n<U+0020><U+0020><color:#172D6F><$image39{scale=0.75}></color>
-    {method} <color:#black><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><size:11>Switch\n<color:#black><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><size:11>AP\n<color:#black><U+0020><U+0020><U+0020><size:11> Controladora
-}
-
-class "<color:#black><b>Servidor RADIUS</color>\n<color:#black><b>AD DS</color>" as Server {
-    <U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><U+0020><color:#172D6F><$image356{scale=0.75}></color>\n\n
-}
-
-Supplicant -[#black]> Authenticator : <color:#black>Layer 2
-Supplicant -[#black]> Authenticator : <U+0020>
-Supplicant -[#black]> Authenticator : <color:#black>EAPoL - EAPoW
-
-Authenticator -[#black]> Server : <color:#black>Layer 3
-Authenticator -[#black]> Server : <U+0020>
-Authenticator -[#black]> Server : <color:#black>RADIUS
-@enduml
-```
+https://github.com/eduardomozart/H3C-PlantUML/blob/59ff55e7ae1c80eed0ba2f0d49e9de93d4bfc13e/Samples/STP.puml#L1-L29
