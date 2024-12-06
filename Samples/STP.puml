@@ -1,0 +1,29 @@
+@startuml
+!define H3CPuml https://raw.githubusercontent.com/eduardomozart/H3C-PlantUML/main/puml
+!include H3CPuml/image39.puml
+!include H3CPuml/image356.puml
+
+<style>
+component {
+  LineColor transparent
+  BackgroundColor transparent
+}
+</style>
+
+component "<color:#172D6F><$image39>" as Root {
+}
+
+component "<color:#172D6F><$image39>" as S1 {
+}
+
+component "<color:#172D6F><$image39>" as S2 {
+}
+
+Root -[hidden]- S1
+Root -- S1
+Root -[hidden]- S1
+Root -- S2
+Root -[#red]-x S2
+Root -[#transparent]-x S2 : Porta bloqueada
+S1 -[#red,norank]-x S2 : Porta bloqueada
+@enduml
